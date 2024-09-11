@@ -1,0 +1,13 @@
+What is inbuilt python function? with examples
+What is concatenation with examples
+What is a variable
+
+
+
+
+Built-in functions are the pre-defined function in Python that allows using the basic properties of string and numbers in your rules. Examples are: sum(), type(), min(), max(), str()
+
+Concatenation is the joining of two or more strings to form a new string.
+print('My' + 'name' + 'is' + 'busola')
+
+A variable serves as a container for storing values.
