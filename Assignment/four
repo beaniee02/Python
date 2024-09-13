@@ -1,0 +1,15 @@
+read on different string methods and their applications
+
+
+The following are the common string methods:
+str.upper(): it converts all characters of the string to uppercase
+str.lower(): it conerts all characters of the string to lowercase.
+str.title(): it converts the first letter of every word to uppercase
+str.split(separator): it splits the string into a list where each word is a list item.
+str.join(iterable): joins the elements of an iterable(e.g. a list) into a single string, with the string acting as a separator
+str.find(substring): returns the lowest index where the substring is found or -1 if it is not found
+str.startswith(substring) and str.endswith(substring): it checks whether the string starts or ends with the specified substring
+str.isdigit(): returns true if all characters in the string are alphabetic
+str.isalnum(): it returns true if all characters in the string are alphanumeric (letters and numbers)
+str.count(substring): it returns the number of occurences of the substring in the string
+str.zfill(width): pads the string on the left with zeros untill it reaches the specified width.

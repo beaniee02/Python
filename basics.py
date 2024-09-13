@@ -108,23 +108,37 @@ not - true if the operand is false not x
 '''
 
 
-a = 'mango'
-b = 'orange'
-if len(a) and len(b) == 5:
-    print('both are of the same length')
-else:
-    print('na lie, both are not of the same length')
+# a = 'mango'
+# b = 'orange'
+# if len(a) and len(b) == 5:
+#     print('both are of the same length')
+# else:
+#     print('na lie, both are not of the same length')
 
 # a = 5
 # b = 3
 # b += a
 # print(b)
 
-score = 0
-question = input('What is your name: ')
-ans = ['Tkristi', 'bukunmi']
-if question in ans:
-    score+=5
-    print('you just scored', score)
-else:
-    print('you just scored', score)
+# score = 0
+# question = input('What is your name: ')
+# ans = ['Tkristi', 'bukunmi']
+# if question in ans:
+#     score+=5
+#     print('you just scored', score)
+# else:
+#     print('you just scored', score)
+
+
+#strings and methods
+name = '    fukunmi olanrewaju'
+# print(len(name))
+# print(name.strip().capitalize())
+print(name.replace('f', 'b', 1))
+
+#indexing
+student_Name = 'Darasimiamaladudu'
+# new_name = student_Name[0:13] + 'lafun'
+# new_name = [student_Name]
+print(student_Name[0:8:2])
+print(student_Name[::2])
