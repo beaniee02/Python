@@ -1,5 +1,5 @@
 My roadmap to learning python
-why am i learning pyhton?
+why am i learning python?
 Get started with python basics
 Master intermediate pyhton concept
 Learn by doing
