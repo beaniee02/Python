@@ -68,15 +68,15 @@ fruits = ('mango', 'pawpaw')
 fruits2 = tuple(('mango', 'pawpaw', 'orange', 'apple'))
 fruits_basket = ('mango', 'pawpaw', 'mango', 'pawpaw', 3j,('temi', 'dara', 'taiwo', 'tk'), ['cucumber', 'banana'], {1, 2, 3})
 
-print(type(fruits2))
-print(len(fruits2))
-print(fruits2[::-1])
-print(len(fruits_basket))
-print('findings: ', fruits_basket[::2])
-print('\nindex 5:', fruits_basket[5][0], '\n')
+# print(type(fruits2))
+# print(len(fruits2))
+# print(fruits2[::-1])
+# print(len(fruits_basket))
+# print('findings: ', fruits_basket[::2])
+# print('\nindex 5:', fruits_basket[5][0], '\n')
 
-for name in fruits_basket[7]:
-    print(name)
+# for name in fruits_basket[7]:
+#     print(name)
 
 #unpacking
 employee = (('Taiwo', 'taiwo123@gmail.com', 'liegeman', 'male'), ('Dara', 'daradudu@gmail.com', 'doughnutBoy', 'male'), ('Temi', 'iyagbogbo@gmail.com', 'iyagbogbo', 'female'), ('Tkristi', 'tgirl@gmial.com', 'tgirlie', 'female'))
@@ -85,7 +85,7 @@ employee = (('Taiwo', 'taiwo123@gmail.com', 'liegeman', 'male'), ('Dara', 'darad
 # print(employee1[0], employee2[0], employee3[0])
 
 employee1, *others, employee3 = employee
-print(others)
+# print(others)
 
 # for name, email, username, gender in employee:
     # print('name of employees', name, '\n')
@@ -93,29 +93,51 @@ print(others)
     # print('username of employees', username, '\n')
     # print('gender of employees', gender, '\n')
 
-x = 0
-for name, _, _, _ in employee:
-    x += 1
-    print(f'name of employees {x} {name} \n')
+# x = 0
+# for name, _, _, _ in employee:
+#     x += 1
+#     print(f'name of employees {x} {name} \n')
 
 #concateninating two tuples
-fruits4 = fruits + fruits2
-print(fruits4)
+# fruits4 = fruits + fruits2
+# print(fruits4)
 
-del fruits
+# del fruits
 
 
 #Set
-set1 = {1, 6, 3, 4, 6, 4}
-set2 = set({8, 4, 3, 9})
+# set1 = {1, 6, 3, 4, 6, 4}
+# set2 = set({8, 4, 3, 9})
 
-print(type(set1))
-print(type(set1))
+# print(type(set1))
+# print(type(set1))
 
-set1.add(5)
-set1.update((12, 14,15))
-set1.remove(15)
-set3 = set1.copy()
-set1.add(10)
-print(set3)
-print(set1)
+# set1.add(5)
+# set1.update((12, 14,15))
+# set1.remove(15)
+# set3 = set1.copy()
+# set1.add(10)
+# print(set3)
+# print(set1)
+
+
+#dictionary
+electronics = {'laptop':'lenovo', 'phone':'samsung', 'mifi':'mtn'}
+electronics2 = dict([(1, 'hp'), (13, 'del')])
+electronics3 = dict(fruits1='mango', fruits2='orange')
+print(type(electronics))
+print(type(electronics2))
+print(electronics2[1])
+print(len(electronics))
+print(electronics2.keys())
+print(electronics2.values())
+print(electronics['laptop'])
+
+for keys, values in electronics.items():
+    print(keys)
+
+electronics.update(dict(year = 2021, color = 'blue'))
+# electronics.pop('phone')
+# electronics.popitem()
+del electronics['year']
+print(electronics)
