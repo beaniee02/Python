@@ -141,4 +141,4 @@ student_Name = 'Darasimiamaladudu'
 # new_name = student_Name[0:13] + 'lafun'
 # new_name = [student_Name]
 print(student_Name[0:8:2])
-print(student_Name[::2])
+print(student_Name[::3])
