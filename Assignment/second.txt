@@ -1,2 +1,0 @@
-Display an output that describes a student with a matric number, department
-Build a static entrance app to describe yourself as an SQI student and specify if you have paid
