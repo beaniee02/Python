@@ -22,8 +22,27 @@ else:
 #         print('round {} >>> this is {}'.format(turns, fruits))
 
 #Multiplication table
-for numbers in range(1, 6):
-    for digits in range(1, 6):
-        multiply = digits * numbers
-        print(f'\n{numbers} * {digits} = {multiply}', end='')
-    print()
+# for numbers in range(1, 6):
+#     for digits in range(1, 6):
+#         multiply = digits * numbers
+#         print(f'\n{numbers} * {digits} = {multiply}', end='')
+#     print()
+
+
+#while loop or while True
+# num = 0
+# while True:
+#     num += 1
+#     print('Welcome!!!')
+#     if num == 5:
+#         break
+
+num = 0
+while num <= 5:
+    num+=1
+    print('number {}'.format(num))
+    print('hello')
+
+#Ternary statements
+num = 6
+print('Hello') if num <= 4 else print('error')
