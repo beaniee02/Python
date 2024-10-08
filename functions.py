@@ -90,3 +90,11 @@ def collegeclass(**kwargs):
     # print(kwargs.keys)
 
 collegeclass(name="SQI", levl="Level2", address="Home", name2="Titi", name3="Tife")
+
+
+import sys
+val1 = 50
+val2 = 20
+def subtract():
+    a = input('enter first value>>> ')
+    b = input('enter second value>>> ')
