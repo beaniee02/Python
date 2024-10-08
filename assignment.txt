@@ -47,3 +47,12 @@ how should it work:
 register 5 students (do not allow any student that is not registered)
 set questions and questions with dictionary (10 questions)
 score them
+
+seventh assignment
+build an atm machine application
+
+eight assignment
+USSD application
+
+ninth assignment
+hospital payment portal
