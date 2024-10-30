@@ -18,6 +18,9 @@ def register():
             random_acct = random.randint(1111111111, 9999999999)
             print(f'Dear, {full_name} this is your account number: {random_acct}')
             print('You have successfully created an account')
+            global balance
+            balance = 15000
+            print(f'You have won {balance} naira for opening an account with us')
             global pin
             pin = pincode()
             global account
@@ -77,13 +80,7 @@ def home():
                 1. Buy Airtime
                 2. Buy Data
                 3. Transfers
-                4. Pay Bills
-                5. Check Balance
-                6. Click Credit
-                7. Enquiries
-                8. Account Opening
-                9. Link NIN
-                0. Next
+                4. Check Balance
         ''')
     if prompt == '1':
         pinprompt()
@@ -93,10 +90,10 @@ def home():
         data()
     if prompt == '3':
         pinprompt()
+        transfer()
     if prompt == '4':
         pinprompt()
-    if prompt == '5':
-        pinprompt()
+        check_balance()
     return prompt
 
 def pinprompt():
@@ -238,8 +235,99 @@ def destination():
         pass
 
 
+def transfer():
+    prompt_user = input('''
+                            1. Trsf-UBA
+                            2. Trsf- Other Banks
+                            3. Trsf- MFB/others
+                        ''')
+    if prompt_user == '1':
+        transfer_prompt()
+        transfer_amount()
+    if prompt_user == '2':
+        transfer_prompt()
+        choose_otherbank()
+    if prompt_user == '3':
+        transfer_prompt()
+        choose_mfbbank()
+    return prompt_user
+
+def transfer_prompt():
+    destination_acct = int(input('Please enter Beneficiary Account Number'))
+    if len(str(destination_acct)) != 10:
+        wrong_transferacct()
+    else:
+        pass
+    return destination_acct
+
+def wrong_transferacct():
+    wrong_acct = int(input('Incorrect account number. Please enter correct account number to proceed. '))
+    if len(str(wrong_acct)) != 10:
+        wrong_transferacct()
+    else:
+        pass
+    return wrong_acct
+
+def choose_otherbank():
+    ask_bank = input('''
+                            Please select Bank:
+                                1. First Bank of Nigeria
+                                2. Access Bank
+                                3. Zenith Bank
+                    ''')
+    if ask_bank == '1':
+        transfer_amount()
+    if ask_bank == '2':
+        transfer_amount()
+    if ask_bank == '3':
+        transfer_amount()
+    return ask_bank
+
+def choose_mfbbank():
+    ask_bank = input('''
+                            Please select Bank:
+                                1. Paycom(Opay)
+                                2. Moniepont
+                                3. Kuda micfrfinance bank
+                                4. Palmpay
+                    ''')
+    if ask_bank == '1':
+        transfer_amount()
+    if ask_bank == '2':
+        transfer_amount()
+    if ask_bank == '3':
+        transfer_amount()
+    if ask_bank == '4':
+        transfer_amount()
+    return ask_bank
+
+def transfer_amount():
+    amount = int(input('Please enter amount: '))
+    if amount > balance:
+        print('Insufficient funds')
+        transfer_amount()
+    if amount < balance:
+        global total_balance
+        total_balance = balance - amount
+        processed()
+    return amount
+
+def check_balance():
+    prompt = input('''
+                            Transaction fee of N20.00 applies.
+                                Do you wish to continue?
+                                        1. Yes
+                                        2. No
+                ''')
+    if prompt == '1':
+        print(f'you have a total of {total_balance} naira in your account.')
+        return sys.exit()
+    if prompt == '2':
+        pass
+
 def processed():
     print('Transaction is being processed.')
+    return sys.exit()
 
 
 register()
